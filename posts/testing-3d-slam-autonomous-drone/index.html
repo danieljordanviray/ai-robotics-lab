@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Testing 3D SLAM autonomous drone outdoors &mdash; AI &amp; Robotics Lab</title>
+<meta property="og:title" content="Testing 3D SLAM autonomous drone outdoors &mdash; AI &amp; Robotics Lab">
+<meta property="og:description" content="Taking 3D SLAM outdoors for real-world testing.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://danieljordanviray.github.io/ai-robotics-lab/posts/testing-3d-slam-autonomous-drone/">
+<meta property="og:image" content="https://danieljordanviray.com/portrait.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+body { font-family: -apple-system, Georgia, serif; max-width: 720px; margin: 0 auto;
+       padding: 24px 18px; line-height: 1.7; color: #1a1a1a; }
+h1 { font-size: 1.6em; } h2 { margin-top: 2em; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+h3 { margin-top: 1.6em; }
+.topnav { font-size: .85rem; margin: 0 0 1.2em; }
+.topnav a { color: #1f6feb; text-decoration: none; }
+img { max-width: 100%; height: auto; border-radius: 6px; }
+figure { margin: 1.5em 0; }
+figcaption { color: #555; font-size: 0.85em; text-align: center; margin-top: 6px; }
+blockquote { border-left: 3px solid #ddd; margin-left: 0; padding-left: 1em; color: #555; }
+table { border-collapse: collapse; font-size: 0.88em; margin: 1em 0; display: block; overflow-x: auto; }
+th, td { border: 1px solid #ccc; padding: 6px 12px; text-align: left; }
+th { background: #f0f0f0; }
+.small { color: #555; font-size: 0.9em; }
+code { background: #f0f0f0; padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+pre { background: #f4f4f4; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 0.82em; }
+pre code { background: none; padding: 0; }
+hr { border: none; border-top: 1px solid #ddd; margin: 2em 0; }
+footer { margin-top: 3em; color: #888; font-size: 0.9em; border-top: 1px solid #ddd; padding-top: 1em; }
+a { color: #1f6feb; }
+</style></head><body>
+<div class="topnav"><a href="../../index.html">&larr; AI &amp; Robotics Lab</a></div>
+<h1>Testing 3D SLAM autonomous drone outdoors</h1>
+<p><em>Crash and burn</em></p>
+<p class="small">Apr 7, 2026 &middot; Autonomy &amp; Mapping &middot; by Daniel Jordan Viray</p>
+<p>Tried to get the 3D mapping working on my autonomous drone, outdoors, in actual flight. But ran into lots of problems!</p><p>First and foremost, I upgraded the hardware for faster compute and better vision (depth perception). The upgrades were essential, but the hardware and mounting gear is heavy. Not too heavy to fly, but the weight imbalances seem like they were too much for the motors/flight controller to compensate. I was controlling the drone via remote control this time, but unless you’re an ultra skilled pilot, it’s hard to intuitively compensate for weight imbalances during flight.</p><p>Which led to the first crash. I think after the first crash, the camera lost track of the features it already plotted on the 3D map. Once the continuity of frames broke, the drone lost itself on the map and so couldn’t continue building the map.</p><p>Then of course there’s the the power supply issue. The battery drains quickly with all the heavy gear and heavy compute. But adding a bigger battery obviously adds to the weight of an already heavy drone.</p><p>Thoughts on solutions: 3D printing custom light-weight mounts to make the drone lighter, and to have better control of how all the gear is balanced on the drone. And also, off-loading any gear that’s not absolutely necessary for the set up. I also think in this particular case, the camera was too heavy and dragging the drone forward; the camera needs to be positioned closer to the drone’s center of gravity. Or get a bigger drone frame. But I want to eventually fly the drone indoors (so smaller is better).</p><p>If you have any thoughts on solutions or are interested in AI/Robotics at all, let’s connect!</p><p></p><figure><img src="https://substackcdn.com/image/fetch/$s_!klgP!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd5f44320-c9d3-4f5b-b575-935e6368bf22_1657x932.jpeg" alt="" loading="lazy"></figure>
+<footer>Originally published on <a href="https://danieljordanviraytech.substack.com">Substack</a>. Built by an AI employee, reviewed by a human boss.</footer>
+</body></html>
